@@ -8,12 +8,12 @@ fi
 
 # Check if filename is provided
 if [ -z "$1" ]; then
-  echo "Usage: $0 <filename>"
+  echo "Usage: $0 <user-data-file>"
   exit 1
 fi
 
 # Variables
-input_file="$1"
+user_data_file="$1"
 log_file="/var/log/user_management.log"
 password_file="/var/secure/user_passwords.csv"
 
@@ -76,7 +76,7 @@ while IFS=";" read -r username groups; do
 
   # Log actions
   echo "Created user $username with groups $groups" | tee -a $log_file
-done < "$input_file"
+done < "$user_data_file"
 
 echo "User creation process completed." | tee -a $log_file
 
