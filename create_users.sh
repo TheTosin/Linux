@@ -31,7 +31,7 @@ generate_password() {
   openssl rand -base64 12
 }
 
-# Read input file and process each line
+# Read user data file and process each line
 while IFS=";" read -r username groups; do
   # Remove leading/trailing whitespaces
   username=$(echo $username | xargs)
