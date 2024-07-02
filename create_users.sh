@@ -15,7 +15,7 @@ fi
 # Variables
 user_data_file="$1"
 log_file="/var/log/user_management.log"
-password_file="/var/secure/user_passwords.csv"
+password_file="/var/secure/user_passwords.txt"
 
 # Create necessary directories and set permissions
 mkdir -p /var/secure
