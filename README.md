@@ -7,4 +7,4 @@ This repository contains a Bash script to automate the creation of users and gro
 Run the script as root and provide the input file as an argument:
 
 ```bash
-sudo bash create_users.sh <input-file>
+sudo bash create_users.sh <users.txt>
